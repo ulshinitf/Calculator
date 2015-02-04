@@ -1,85 +1,131 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Text;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
 
+        /*
+         *  Basic variables 
+         */
         double digit1 = 0, digit2 = 0, result = 0;
         char operation = '+';
+        bool operationChoosed = false;
+        StringBuilder currentState = new StringBuilder();
 
         private void buttonDot_Click(object sender, EventArgs e)
         {
-            textBox1.Text += (sender as Button).Text;
+            if (CalcTextBox.Text.IndexOf((sender as Button).Text) == -1)
+                CalcTextBox.Text += (sender as Button).Text;            
+        }
+
+        private void button0_Click(object sender, EventArgs e)
+        {
+            if (CalcTextBox.Text != "0")
+            {
+                CalcTextBox.Text += (sender as Button).Text;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (CalcTextBox.Text == "0")
+                CalcTextBox.Text = (sender as Button).Text;
+            else
+                CalcTextBox.Text += (sender as Button).Text;
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
         {
-            try
+            if (operationChoosed)
             {
-                digit1 = Convert.ToDouble(textBox1.Text);
+                Calculate();
+                digit1 = result;
+                digit2 = 0;
+                result = 0;
+                currentState.Append(CalcTextBox.Text);
+                currentState.Append((sender as Button).Text);
+                DisplayBox.Text = currentState.ToString();
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox1.Clear();
-                return;
-            }
+                try
+                {
+                    digit1 = Convert.ToDouble(CalcTextBox.Text);
+                    currentState.Append(CalcTextBox.Text);
+                    currentState.Append((sender as Button).Text);
+                    DisplayBox.Text = currentState.ToString();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CalcTextBox.Clear();
+                    return;
+                }
 
-            textBox1.Clear();
-            operation = (sender as Button).Text[0];
+                CalcTextBox.Clear();
+                operation = (sender as Button).Text[0];
+                operationChoosed = true;
+            }
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
             try
             {
-                digit2 = Convert.ToDouble(textBox1.Text);
+                digit2 = Convert.ToDouble(CalcTextBox.Text);
             }
             catch (Exception)
             {
                 MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox1.Clear();
+                CalcTextBox.Clear();
                 return;
             }
 
-            switch (operation)
-            {
-                case '+': result = digit1 + digit2;
-                    break;
-                case '-': result = digit1 - digit2;
-                    break;
-                case 'x': result = digit1 * digit2;
-                    break;
-                case '/': result = digit1 / digit2;
-                    break;
-            }
+            Calculate();
 
-            textBox1.Text = result.ToString();
+            operationChoosed = false;
+
+            currentState.Clear();
+            DisplayBox.Clear();
+
+            CalcTextBox.Text = result.ToString();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            CalcTextBox.Text = "0";
         }
 
         private void buttonChangeSign_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
-                if (textBox1.Text[0] == '-')
-                    textBox1.Text = textBox1.Text.Remove(0, 1);
-                else textBox1.Text = '-' + textBox1.Text;
+            if (CalcTextBox.Text != "")
+                if (CalcTextBox.Text[0] == '-')
+                    CalcTextBox.Text = CalcTextBox.Text.Remove(0, 1);
+                else CalcTextBox.Text = '-' + CalcTextBox.Text;
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
-                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            if (CalcTextBox.Text != "")
+                CalcTextBox.Text = CalcTextBox.Text.Remove(CalcTextBox.Text.Length - 1, 1);
+        }
+
+        private void buttonCE_Click(object sender, EventArgs e)
+        {
+            digit1 = 0;
+            digit2 = 0;
+            result = 0;
+            operationChoosed = false;
+            currentState.Clear();
+            DisplayBox.Clear();
+            CalcTextBox.Text = "0";
         }
 
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,5 +137,27 @@ namespace Calculator
         {
             Application.Exit();
         }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show(sender.ToString());
+        }
+
+        private void Calculate()
+        {
+            switch (operation)
+            {
+                case '+': result = digit1 + digit2;
+                    break;
+                case '-': result = digit1 - digit2;
+                    break;
+                case 'x': result = digit1 * digit2;
+                    break;
+                case '/': result = digit1 / digit2;
+                    break;
+            }
+        }
+
+        
     }
 }
