@@ -100,15 +100,15 @@ namespace Calculator
 
             Calculate();
 
-            operationChoosed = false;
-
             currentState.Append(digit2);
-            DisplayBox.Text = currentState.ToString();
-            currentState.Clear();
 
+            DisplayBox.Text = currentState.ToString();
             CalcTextBox.Text = result.ToString();
+
+            currentState.Clear();
             result = 0;
             operationCompleted = true;
+            operationChoosed = false;
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
