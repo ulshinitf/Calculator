@@ -53,6 +53,7 @@
             // buttonRemove
             // 
             this.buttonRemove.BackColor = System.Drawing.Color.Red;
+            this.buttonRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRemove.Location = new System.Drawing.Point(231, 107);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(30, 30);
@@ -64,6 +65,7 @@
             // buttonChangeSign
             // 
             this.buttonChangeSign.BackColor = System.Drawing.Color.Yellow;
+            this.buttonChangeSign.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeSign.Location = new System.Drawing.Point(231, 291);
             this.buttonChangeSign.Name = "buttonChangeSign";
             this.buttonChangeSign.Size = new System.Drawing.Size(30, 30);
@@ -75,6 +77,7 @@
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.Red;
+            this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClear.Location = new System.Drawing.Point(156, 107);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(30, 30);
@@ -86,6 +89,7 @@
             // buttonDot
             // 
             this.buttonDot.BackColor = System.Drawing.Color.Aqua;
+            this.buttonDot.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDot.Location = new System.Drawing.Point(12, 281);
             this.buttonDot.Name = "buttonDot";
             this.buttonDot.Size = new System.Drawing.Size(66, 40);
@@ -97,6 +101,7 @@
             // button0
             // 
             this.button0.BackColor = System.Drawing.Color.Lime;
+            this.button0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button0.Location = new System.Drawing.Point(84, 281);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(66, 40);
@@ -108,6 +113,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Lime;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(156, 235);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(69, 40);
@@ -119,6 +125,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Lime;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(84, 235);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 40);
@@ -130,6 +137,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(12, 235);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 40);
@@ -141,6 +149,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Lime;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Location = new System.Drawing.Point(156, 189);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(69, 40);
@@ -152,6 +161,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Lime;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Location = new System.Drawing.Point(84, 189);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(66, 40);
@@ -163,6 +173,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Lime;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Location = new System.Drawing.Point(12, 189);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(66, 40);
@@ -174,6 +185,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Lime;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Location = new System.Drawing.Point(156, 143);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(69, 40);
@@ -185,6 +197,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Lime;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Location = new System.Drawing.Point(84, 143);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(66, 40);
@@ -196,6 +209,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Lime;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Location = new System.Drawing.Point(12, 143);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(66, 40);
@@ -207,6 +221,7 @@
             // buttonEquals
             // 
             this.buttonEquals.BackColor = System.Drawing.Color.Aqua;
+            this.buttonEquals.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEquals.Location = new System.Drawing.Point(156, 281);
             this.buttonEquals.Name = "buttonEquals";
             this.buttonEquals.Size = new System.Drawing.Size(69, 40);
@@ -218,6 +233,7 @@
             // buttonDiv
             // 
             this.buttonDiv.BackColor = System.Drawing.Color.Yellow;
+            this.buttonDiv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDiv.Location = new System.Drawing.Point(231, 255);
             this.buttonDiv.Name = "buttonDiv";
             this.buttonDiv.Size = new System.Drawing.Size(30, 30);
@@ -229,6 +245,7 @@
             // buttonMul
             // 
             this.buttonMul.BackColor = System.Drawing.Color.Yellow;
+            this.buttonMul.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMul.Location = new System.Drawing.Point(231, 219);
             this.buttonMul.Name = "buttonMul";
             this.buttonMul.Size = new System.Drawing.Size(30, 30);
@@ -240,6 +257,7 @@
             // buttonMinus
             // 
             this.buttonMinus.BackColor = System.Drawing.Color.Yellow;
+            this.buttonMinus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMinus.Location = new System.Drawing.Point(231, 183);
             this.buttonMinus.Name = "buttonMinus";
@@ -252,6 +270,7 @@
             // buttonPlus
             // 
             this.buttonPlus.BackColor = System.Drawing.Color.Yellow;
+            this.buttonPlus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPlus.Location = new System.Drawing.Point(231, 147);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(30, 30);
@@ -319,6 +338,7 @@
             // buttonCE
             // 
             this.buttonCE.BackColor = System.Drawing.Color.Red;
+            this.buttonCE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCE.Location = new System.Drawing.Point(192, 107);
             this.buttonCE.Name = "buttonCE";
             this.buttonCE.Size = new System.Drawing.Size(30, 30);
