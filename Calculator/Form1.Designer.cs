@@ -44,6 +44,7 @@
             this.CalcTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DisplayBox = new System.Windows.Forms.TextBox();
             this.buttonCE = new System.Windows.Forms.Button();
@@ -55,10 +56,8 @@
             this.buttonACos = new System.Windows.Forms.Button();
             this.buttonSqrt = new System.Windows.Forms.Button();
             this.buttonNrt = new System.Windows.Forms.Button();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonSqr = new System.Windows.Forms.Button();
             this.buttonPow = new System.Windows.Forms.Button();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonPercent = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -317,7 +316,6 @@
             this.menuStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.helpToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -333,6 +331,13 @@
             this.mainToolStripMenuItem.Size = new System.Drawing.Size(51, 18);
             this.mainToolStripMenuItem.Text = "About";
             this.mainToolStripMenuItem.Click += new System.EventHandler(this.mainToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(43, 18);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -470,13 +475,6 @@
             this.buttonNrt.UseVisualStyleBackColor = false;
             this.buttonNrt.Click += new System.EventHandler(this.buttonNrt_Click);
             // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(43, 18);
-            this.helpToolStripMenuItem.Text = "Help";
-            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
-            // 
             // buttonSqr
             // 
             this.buttonSqr.BackColor = System.Drawing.Color.Yellow;
@@ -502,12 +500,6 @@
             this.buttonPow.Text = "Pow";
             this.buttonPow.UseVisualStyleBackColor = false;
             this.buttonPow.Click += new System.EventHandler(this.buttonPow_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(43, 18);
-            this.toolStripMenuItem1.Text = "Help";
             // 
             // buttonPercent
             // 
@@ -613,7 +605,6 @@
         private System.Windows.Forms.Button buttonSqrt;
         private System.Windows.Forms.Button buttonNrt;
         private System.Windows.Forms.Button buttonSqr;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Button buttonPow;
         private System.Windows.Forms.Button buttonPercent;
     }
