@@ -12,19 +12,19 @@ namespace Calculator
             InitializeComponent();
         }
 
-        /*
-         *  Basic variables 
-         */
+        #region Basic variables
         private double digit1 = 0, digit2 = 0, result = 0;
-        private char operation = '+';
+        private string operation = "+";
         private bool operationChoosed = false;
         private bool operationCompleted = false;
-        private StringBuilder currentState = new StringBuilder();
+        private StringBuilder currentState = new StringBuilder(); 
+        #endregion
 
+        #region Buttons handlers
         private void buttonDot_Click(object sender, EventArgs e)
         {
             if (CalcTextBox.Text.IndexOf((sender as Button).Text) == -1)
-                CalcTextBox.Text += (sender as Button).Text;            
+                CalcTextBox.Text += (sender as Button).Text;
         }
 
         private void button0_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace Calculator
             }
 
             CalcTextBox.Clear();
-            operation = (sender as Button).Text[0];
+            operation = (sender as Button).Text;
             operationChoosed = true;
         }
 
@@ -145,12 +145,267 @@ namespace Calculator
             operationCompleted = false;
             currentState.Clear();
             DisplayBox.Clear();
-            CalcTextBox.Text = "0";            
+            CalcTextBox.Text = "0";
+        }
+
+        private void buttonSin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Sin(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("Sin({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonCos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Cos(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("Cos({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonTg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Tan(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("Tg({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonASin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Asin(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("ASin({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonACos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Acos(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("ACos({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonATg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Atan(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("Atg({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonSqr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Pow(Convert.ToDouble(CalcTextBox.Text), 2);
+                currentState.Append(String.Format("Square({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonPow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                digit1 = Convert.ToDouble(CalcTextBox.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            ValueForm f = new ValueForm();
+            f.ShowDialog();
+
+            if (!ValueData.Cancelled)
+            {
+                result = Math.Pow(digit1, ValueData.Data);
+
+                currentState.Append(String.Format("Pow({0}), N = {1}", digit1, ValueData.Data));
+
+                DisplayBox.Text = currentState.ToString();
+                CalcTextBox.Text = result.ToString();
+
+                currentState.Clear();
+                result = 0;
+                operationCompleted = true;
+                operationChoosed = false;
+            }
+            else return;
+        }
+
+        private void buttonSqrt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result = Math.Sqrt(Convert.ToDouble(CalcTextBox.Text));
+                currentState.Append(String.Format("Sqrt({0})", CalcTextBox.Text));
+                DisplayBox.Text = currentState.ToString();
+
+                CalcTextBox.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            currentState.Clear();
+            result = 0;
+            operationCompleted = true;
+            operationChoosed = false;
+        }
+
+        private void buttonNrt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                digit1 = Convert.ToDouble(CalcTextBox.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Incorrect data!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CalcTextBox.Clear();
+                return;
+            }
+
+            ValueForm f = new ValueForm();
+            f.ShowDialog();
+
+            if (!ValueData.Cancelled)
+            {
+                NthRoot(digit1, ValueData.Data);
+
+                currentState.Append(String.Format("NthRoot({0}), N = {1}", digit1, ValueData.Data));
+
+                DisplayBox.Text = currentState.ToString();
+                CalcTextBox.Text = result.ToString();
+
+                currentState.Clear();
+                result = 0;
+                operationCompleted = true;
+                operationChoosed = false;
+            }
+            else return;
         }
 
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Calculator © 2015", "About Calculator", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sqrt - Square Root\nNrt - N-th root\nSqr - Square\nPowN - Raise to the N power", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -211,21 +466,29 @@ namespace Calculator
                     break;
                 default: break;
             }
-        }
+        } 
+        #endregion
 
         private void Calculate()
         {
             switch (operation)
             {
-                case '+': result = digit1 + digit2;
+                case "+": result = digit1 + digit2;
                     break;
-                case '-': result = digit1 - digit2;
+                case "-": result = digit1 - digit2;
                     break;
-                case 'x': result = digit1 * digit2;
+                case "x": result = digit1 * digit2;
                     break;
-                case '/': result = digit1 / digit2;
+                case "/": result = digit1 / digit2;
+                    break;
+                case "%": result = (digit1 / digit2) * 100;
                     break;
             }
+        }
+
+        private void NthRoot(double digit, double N)
+        {
+            result = Math.Pow(digit, 1.0 / N);
         }
     }
 }

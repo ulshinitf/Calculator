@@ -47,6 +47,19 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DisplayBox = new System.Windows.Forms.TextBox();
             this.buttonCE = new System.Windows.Forms.Button();
+            this.buttonSin = new System.Windows.Forms.Button();
+            this.buttonCos = new System.Windows.Forms.Button();
+            this.buttonTg = new System.Windows.Forms.Button();
+            this.buttonAtg = new System.Windows.Forms.Button();
+            this.buttonASin = new System.Windows.Forms.Button();
+            this.buttonACos = new System.Windows.Forms.Button();
+            this.buttonSqrt = new System.Windows.Forms.Button();
+            this.buttonNrt = new System.Windows.Forms.Button();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonSqr = new System.Windows.Forms.Button();
+            this.buttonPow = new System.Windows.Forms.Button();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonPercent = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,9 +67,9 @@
             // 
             this.buttonRemove.BackColor = System.Drawing.Color.Red;
             this.buttonRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRemove.Location = new System.Drawing.Point(231, 107);
+            this.buttonRemove.Location = new System.Drawing.Point(415, 107);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(30, 30);
+            this.buttonRemove.Size = new System.Drawing.Size(40, 30);
             this.buttonRemove.TabIndex = 59;
             this.buttonRemove.Text = "<--";
             this.buttonRemove.UseVisualStyleBackColor = false;
@@ -66,9 +79,10 @@
             // 
             this.buttonChangeSign.BackColor = System.Drawing.Color.Yellow;
             this.buttonChangeSign.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeSign.Location = new System.Drawing.Point(231, 291);
+            this.buttonChangeSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonChangeSign.Location = new System.Drawing.Point(231, 279);
             this.buttonChangeSign.Name = "buttonChangeSign";
-            this.buttonChangeSign.Size = new System.Drawing.Size(30, 30);
+            this.buttonChangeSign.Size = new System.Drawing.Size(40, 40);
             this.buttonChangeSign.TabIndex = 58;
             this.buttonChangeSign.Text = "±";
             this.buttonChangeSign.UseVisualStyleBackColor = false;
@@ -78,9 +92,9 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.Red;
             this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClear.Location = new System.Drawing.Point(156, 107);
+            this.buttonClear.Location = new System.Drawing.Point(323, 107);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(30, 30);
+            this.buttonClear.Size = new System.Drawing.Size(40, 30);
             this.buttonClear.TabIndex = 57;
             this.buttonClear.Text = "C";
             this.buttonClear.UseVisualStyleBackColor = false;
@@ -234,9 +248,10 @@
             // 
             this.buttonDiv.BackColor = System.Drawing.Color.Yellow;
             this.buttonDiv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDiv.Location = new System.Drawing.Point(231, 255);
+            this.buttonDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonDiv.Location = new System.Drawing.Point(369, 143);
             this.buttonDiv.Name = "buttonDiv";
-            this.buttonDiv.Size = new System.Drawing.Size(30, 30);
+            this.buttonDiv.Size = new System.Drawing.Size(40, 40);
             this.buttonDiv.TabIndex = 44;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = false;
@@ -246,9 +261,10 @@
             // 
             this.buttonMul.BackColor = System.Drawing.Color.Yellow;
             this.buttonMul.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMul.Location = new System.Drawing.Point(231, 219);
+            this.buttonMul.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonMul.Location = new System.Drawing.Point(323, 143);
             this.buttonMul.Name = "buttonMul";
-            this.buttonMul.Size = new System.Drawing.Size(30, 30);
+            this.buttonMul.Size = new System.Drawing.Size(40, 40);
             this.buttonMul.TabIndex = 43;
             this.buttonMul.Text = "x";
             this.buttonMul.UseVisualStyleBackColor = false;
@@ -258,10 +274,10 @@
             // 
             this.buttonMinus.BackColor = System.Drawing.Color.Yellow;
             this.buttonMinus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonMinus.Location = new System.Drawing.Point(231, 183);
+            this.buttonMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonMinus.Location = new System.Drawing.Point(277, 143);
             this.buttonMinus.Name = "buttonMinus";
-            this.buttonMinus.Size = new System.Drawing.Size(30, 30);
+            this.buttonMinus.Size = new System.Drawing.Size(40, 40);
             this.buttonMinus.TabIndex = 42;
             this.buttonMinus.Text = "-";
             this.buttonMinus.UseVisualStyleBackColor = false;
@@ -271,9 +287,10 @@
             // 
             this.buttonPlus.BackColor = System.Drawing.Color.Yellow;
             this.buttonPlus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPlus.Location = new System.Drawing.Point(231, 147);
+            this.buttonPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonPlus.Location = new System.Drawing.Point(231, 143);
             this.buttonPlus.Name = "buttonPlus";
-            this.buttonPlus.Size = new System.Drawing.Size(30, 30);
+            this.buttonPlus.Size = new System.Drawing.Size(40, 40);
             this.buttonPlus.TabIndex = 41;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = false;
@@ -288,7 +305,7 @@
             this.CalcTextBox.Location = new System.Drawing.Point(12, 66);
             this.CalcTextBox.Name = "CalcTextBox";
             this.CalcTextBox.ReadOnly = true;
-            this.CalcTextBox.Size = new System.Drawing.Size(249, 35);
+            this.CalcTextBox.Size = new System.Drawing.Size(443, 35);
             this.CalcTextBox.TabIndex = 40;
             this.CalcTextBox.Text = "0";
             this.CalcTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -300,11 +317,13 @@
             this.menuStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.helpToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(0);
-            this.menuStrip.Size = new System.Drawing.Size(269, 18);
+            this.menuStrip.Size = new System.Drawing.Size(467, 18);
             this.menuStrip.TabIndex = 60;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -331,7 +350,7 @@
             this.DisplayBox.Location = new System.Drawing.Point(13, 34);
             this.DisplayBox.Name = "DisplayBox";
             this.DisplayBox.ReadOnly = true;
-            this.DisplayBox.Size = new System.Drawing.Size(248, 20);
+            this.DisplayBox.Size = new System.Drawing.Size(442, 20);
             this.DisplayBox.TabIndex = 61;
             this.DisplayBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -339,20 +358,187 @@
             // 
             this.buttonCE.BackColor = System.Drawing.Color.Red;
             this.buttonCE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCE.Location = new System.Drawing.Point(192, 107);
+            this.buttonCE.Location = new System.Drawing.Point(369, 107);
             this.buttonCE.Name = "buttonCE";
-            this.buttonCE.Size = new System.Drawing.Size(30, 30);
+            this.buttonCE.Size = new System.Drawing.Size(40, 30);
             this.buttonCE.TabIndex = 62;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = false;
             this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
+            // 
+            // buttonSin
+            // 
+            this.buttonSin.BackColor = System.Drawing.Color.Yellow;
+            this.buttonSin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonSin.Location = new System.Drawing.Point(231, 189);
+            this.buttonSin.Name = "buttonSin";
+            this.buttonSin.Size = new System.Drawing.Size(40, 40);
+            this.buttonSin.TabIndex = 63;
+            this.buttonSin.Text = "Sin";
+            this.buttonSin.UseVisualStyleBackColor = false;
+            this.buttonSin.Click += new System.EventHandler(this.buttonSin_Click);
+            // 
+            // buttonCos
+            // 
+            this.buttonCos.BackColor = System.Drawing.Color.Yellow;
+            this.buttonCos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonCos.Location = new System.Drawing.Point(277, 189);
+            this.buttonCos.Name = "buttonCos";
+            this.buttonCos.Size = new System.Drawing.Size(40, 40);
+            this.buttonCos.TabIndex = 64;
+            this.buttonCos.Text = "Cos";
+            this.buttonCos.UseVisualStyleBackColor = false;
+            this.buttonCos.Click += new System.EventHandler(this.buttonCos_Click);
+            // 
+            // buttonTg
+            // 
+            this.buttonTg.BackColor = System.Drawing.Color.Yellow;
+            this.buttonTg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buttonTg.Location = new System.Drawing.Point(323, 189);
+            this.buttonTg.Name = "buttonTg";
+            this.buttonTg.Size = new System.Drawing.Size(40, 40);
+            this.buttonTg.TabIndex = 65;
+            this.buttonTg.Text = "Tg";
+            this.buttonTg.UseVisualStyleBackColor = false;
+            this.buttonTg.Click += new System.EventHandler(this.buttonTg_Click);
+            // 
+            // buttonAtg
+            // 
+            this.buttonAtg.BackColor = System.Drawing.Color.Yellow;
+            this.buttonAtg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.buttonAtg.Location = new System.Drawing.Point(323, 235);
+            this.buttonAtg.Name = "buttonAtg";
+            this.buttonAtg.Size = new System.Drawing.Size(40, 40);
+            this.buttonAtg.TabIndex = 66;
+            this.buttonAtg.Text = "ATg";
+            this.buttonAtg.UseVisualStyleBackColor = false;
+            this.buttonAtg.Click += new System.EventHandler(this.buttonATg_Click);
+            // 
+            // buttonASin
+            // 
+            this.buttonASin.BackColor = System.Drawing.Color.Yellow;
+            this.buttonASin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonASin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.buttonASin.Location = new System.Drawing.Point(231, 235);
+            this.buttonASin.Name = "buttonASin";
+            this.buttonASin.Size = new System.Drawing.Size(40, 40);
+            this.buttonASin.TabIndex = 67;
+            this.buttonASin.Text = "ASin";
+            this.buttonASin.UseVisualStyleBackColor = false;
+            this.buttonASin.Click += new System.EventHandler(this.buttonASin_Click);
+            // 
+            // buttonACos
+            // 
+            this.buttonACos.BackColor = System.Drawing.Color.Yellow;
+            this.buttonACos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonACos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.buttonACos.Location = new System.Drawing.Point(277, 234);
+            this.buttonACos.Name = "buttonACos";
+            this.buttonACos.Size = new System.Drawing.Size(40, 40);
+            this.buttonACos.TabIndex = 68;
+            this.buttonACos.Text = "ACos";
+            this.buttonACos.UseVisualStyleBackColor = false;
+            this.buttonACos.Click += new System.EventHandler(this.buttonACos_Click);
+            // 
+            // buttonSqrt
+            // 
+            this.buttonSqrt.BackColor = System.Drawing.Color.Yellow;
+            this.buttonSqrt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.buttonSqrt.Location = new System.Drawing.Point(369, 235);
+            this.buttonSqrt.Name = "buttonSqrt";
+            this.buttonSqrt.Size = new System.Drawing.Size(40, 40);
+            this.buttonSqrt.TabIndex = 69;
+            this.buttonSqrt.Text = "Sqrt";
+            this.buttonSqrt.UseVisualStyleBackColor = false;
+            this.buttonSqrt.Click += new System.EventHandler(this.buttonSqrt_Click);
+            // 
+            // buttonNrt
+            // 
+            this.buttonNrt.BackColor = System.Drawing.Color.Yellow;
+            this.buttonNrt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.buttonNrt.Location = new System.Drawing.Point(415, 234);
+            this.buttonNrt.Name = "buttonNrt";
+            this.buttonNrt.Size = new System.Drawing.Size(40, 40);
+            this.buttonNrt.TabIndex = 70;
+            this.buttonNrt.Text = "Nrt";
+            this.buttonNrt.UseVisualStyleBackColor = false;
+            this.buttonNrt.Click += new System.EventHandler(this.buttonNrt_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(43, 18);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // buttonSqr
+            // 
+            this.buttonSqr.BackColor = System.Drawing.Color.Yellow;
+            this.buttonSqr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSqr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.buttonSqr.Location = new System.Drawing.Point(369, 189);
+            this.buttonSqr.Name = "buttonSqr";
+            this.buttonSqr.Size = new System.Drawing.Size(40, 40);
+            this.buttonSqr.TabIndex = 71;
+            this.buttonSqr.Text = "Sqr";
+            this.buttonSqr.UseVisualStyleBackColor = false;
+            this.buttonSqr.Click += new System.EventHandler(this.buttonSqr_Click);
+            // 
+            // buttonPow
+            // 
+            this.buttonPow.BackColor = System.Drawing.Color.Yellow;
+            this.buttonPow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.buttonPow.Location = new System.Drawing.Point(415, 188);
+            this.buttonPow.Name = "buttonPow";
+            this.buttonPow.Size = new System.Drawing.Size(40, 40);
+            this.buttonPow.TabIndex = 72;
+            this.buttonPow.Text = "Pow";
+            this.buttonPow.UseVisualStyleBackColor = false;
+            this.buttonPow.Click += new System.EventHandler(this.buttonPow_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(43, 18);
+            this.toolStripMenuItem1.Text = "Help";
+            // 
+            // buttonPercent
+            // 
+            this.buttonPercent.BackColor = System.Drawing.Color.Yellow;
+            this.buttonPercent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.buttonPercent.Location = new System.Drawing.Point(415, 143);
+            this.buttonPercent.Name = "buttonPercent";
+            this.buttonPercent.Size = new System.Drawing.Size(40, 40);
+            this.buttonPercent.TabIndex = 73;
+            this.buttonPercent.Text = "%";
+            this.buttonPercent.UseVisualStyleBackColor = false;
+            this.buttonPercent.Click += new System.EventHandler(this.buttonPlus_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(269, 331);
+            this.ClientSize = new System.Drawing.Size(467, 331);
+            this.Controls.Add(this.buttonPercent);
+            this.Controls.Add(this.buttonPow);
+            this.Controls.Add(this.buttonSqr);
+            this.Controls.Add(this.buttonNrt);
+            this.Controls.Add(this.buttonSqrt);
+            this.Controls.Add(this.buttonACos);
+            this.Controls.Add(this.buttonASin);
+            this.Controls.Add(this.buttonAtg);
+            this.Controls.Add(this.buttonTg);
+            this.Controls.Add(this.buttonCos);
+            this.Controls.Add(this.buttonSin);
             this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.DisplayBox);
             this.Controls.Add(this.buttonRemove);
@@ -417,6 +603,19 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.TextBox DisplayBox;
         private System.Windows.Forms.Button buttonCE;
+        private System.Windows.Forms.Button buttonSin;
+        private System.Windows.Forms.Button buttonCos;
+        private System.Windows.Forms.Button buttonTg;
+        private System.Windows.Forms.Button buttonAtg;
+        private System.Windows.Forms.Button buttonASin;
+        private System.Windows.Forms.Button buttonACos;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.Button buttonSqrt;
+        private System.Windows.Forms.Button buttonNrt;
+        private System.Windows.Forms.Button buttonSqr;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Button buttonPow;
+        private System.Windows.Forms.Button buttonPercent;
     }
 }
 

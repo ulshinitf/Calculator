@@ -25,3 +25,4 @@ E:\Git\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
 E:\Git\Calculator\obj\Debug\Calculator.MainForm.resources
 E:\Git\Calculator\obj\Debug\Calculator.Properties.Resources.resources
 E:\Git\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+E:\Git\Calculator\obj\Debug\Calculator.ValueForm.resources
