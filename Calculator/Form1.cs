@@ -21,6 +21,7 @@ namespace Calculator
         #endregion
 
         #region Buttons handlers
+
         private void buttonDot_Click(object sender, EventArgs e)
         {
             if (CalcTextBox.Text.IndexOf((sender as Button).Text) == -1)
@@ -467,6 +468,7 @@ namespace Calculator
                 default: break;
             }
         } 
+
         #endregion
 
         private void Calculate()
